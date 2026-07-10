@@ -107,15 +107,12 @@ button { cursor: pointer; }
 .brand-copy p { color: rgba(255,255,255,.7); font-size: 14px; line-height: 1.65; }
 .login-panel { display: flex; align-items: center; justify-content: center; padding: 48px 24px; }
 .login-box { width: 100%; max-width: 380px; }
-.logo { display: flex; align-items: center; gap: 10px; }
-.logo-mark { position: relative; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 6px; background: var(--madrid); color: white; font-weight: 800; }
-.logo-mark .roof { position: absolute; top: -10px; color: var(--madrid); }
-.logo-name { font-size: 14px; font-weight: 800; text-transform: lowercase; }
-.logo-sub { font-size: 9px; font-weight: 700; color: var(--muted-foreground); }
-.logo.dark .logo-name { color: white; }
-.logo.dark .logo-sub { color: rgba(255,255,255,.6); }
+.logo { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.logo-img { display: block; width: 132px; max-width: 100%; height: auto; flex: 0 1 auto; }
+.logo.dark .logo-img { filter: drop-shadow(0 7px 16px rgba(0,0,0,.35)); }
+.sidebar-head .logo-img { width: 104px; }
 .logo-product { margin-left: 4px; padding-left: 10px; border-left: 1px solid var(--border); color: var(--madrid); font-weight: 800; font-size: 13px; }
-.logo.dark .logo-product { border-left-color: rgba(255,255,255,.15); }
+.logo.dark .logo-product { border-left-color: color-mix(in oklch, var(--madrid), transparent 45%); color: var(--madrid-hover); text-shadow: 0 5px 16px rgba(0,0,0,.45); }
 .card {
   border: 1px solid var(--border);
   border-radius: 8px;

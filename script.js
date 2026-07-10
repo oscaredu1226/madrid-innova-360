@@ -137,6 +137,7 @@ const BITACORA = [
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[c]);
+const LOGO_URL = "https://madridinmobiliaria.pe/img/svg/logo.svg";
 const fmtM = (n) => `S/ ${(n / 1000).toFixed(1)}M`;
 const sum = (arr, fn) => arr.reduce((s, x) => s + fn(x), 0);
 const roleName = () => ROLES.find((r) => r[0] === state.role)?.[1] || "Gestor del portafolio";
@@ -173,8 +174,7 @@ function icon(name, cls = "icon") {
 
 function logo(dark = false, product = true) {
   return `<div class="logo ${dark ? "dark" : ""}">
-    <div class="logo-mark">${icon("home", "roof")}<span>m</span></div>
-    <div><div class="logo-name">madrid</div><div class="logo-sub uc">Inmobiliaria</div></div>
+    <img class="logo-img" src="${LOGO_URL}" alt="Madrid Inmobiliaria" loading="eager" decoding="async">
     ${product ? `<div class="logo-product">Innova 360</div>` : ""}
   </div>`;
 }
